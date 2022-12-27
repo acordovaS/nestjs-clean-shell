@@ -4,9 +4,17 @@ import { TypeOrmConfigModule } from './infrastructure/config/typeorm/typeorm.mod
 import { LoggerModule } from './infrastructure/logger/logger.module';
 import { ExceptionsModule } from './infrastructure/exceptions/exceptions.module';
 import { RepositoriesModule } from './infrastructure/repositories/repositories.module';
+import { UserCasesProxyModule } from './infrastructure/usecases-proxy/user-cases-proxy.module';
 
 @Module({
-  imports: [EnvironmentConfigModule, TypeOrmConfigModule, LoggerModule, ExceptionsModule, RepositoriesModule],
+  imports: [
+    EnvironmentConfigModule,
+    TypeOrmConfigModule,
+    LoggerModule,
+    ExceptionsModule,
+    RepositoriesModule,
+    UserCasesProxyModule,
+  ],
   controllers: [],
   providers: [],
 })
